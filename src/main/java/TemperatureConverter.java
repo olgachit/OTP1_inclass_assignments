@@ -13,6 +13,10 @@ public class TemperatureConverter {
         return celsius < -40 || celsius > 50;
     }
 
+    public static double kelvinToCelsius(double kelvin) {
+        return kelvin - 273.15;
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter temperature in Fahrenheit:");
@@ -21,6 +25,8 @@ public class TemperatureConverter {
         double celsiusInput = scanner.nextDouble();
         System.out.println("Enter temperature to check for extreme conditions in Celsius:");
         double extremeInput = scanner.nextDouble();
+        System.out.println("Enter temperature in Kelvin:");
+        double kelvinInput = scanner.nextDouble();
 
         double celsius = fahrenheitToCelsius(fahrenheitInput);
         System.out.println(fahrenheitInput + "°F is " + celsius + "°C");
@@ -33,5 +39,8 @@ public class TemperatureConverter {
         } else {
             System.out.println(extremeInput + "°C is not an extreme temperature.");
         }
+
+        double celsiusFromKelvin = kelvinToCelsius(kelvinInput);
+        System.out.println(kelvinInput + "K is " + celsiusFromKelvin + "°C");
     }
 }
