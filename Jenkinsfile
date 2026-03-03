@@ -17,7 +17,8 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/olgachit/OTP1_inclass_assignments.git'
+                git branch: 'main',
+                        url: 'https://github.com/olgachit/OTP1_inclass_assignments.git'
             }
         }
 
