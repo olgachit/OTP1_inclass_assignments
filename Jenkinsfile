@@ -8,7 +8,7 @@ pipeline {
     }
 
     environment {
-        PATH = "/opt/homebrew/bin/docker:${env.PATH}"
+        PATH = "/opt/homebrew/bin:${env.PATH}"
         DOCKERHUB_CREDENTIALS_ID = 'docker_hub'
         DOCKERHUB_REPO = 'olgachi/demo1_2026'
         DOCKER_IMAGE_TAG = 'latest'
